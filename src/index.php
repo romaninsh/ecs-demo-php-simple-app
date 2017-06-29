@@ -23,7 +23,17 @@
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
+
+                        $externalContent = file_get_contents('http://checkip.dyndns.com/');
+                        preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
+                        $externalIp = $m[1];
+
+                        for($i = 0; $i < 10000000; $i++) {
+                               $a += $i;
+                        }
+
                 ?>
+                <p>The container IP is: <?php echo $externalIp; ?>.</p>
 
             </div>
         </div>
