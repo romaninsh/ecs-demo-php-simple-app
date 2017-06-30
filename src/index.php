@@ -24,10 +24,6 @@
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
 
-                        $externalContent = file_get_contents('http://checkip.dyndns.com/');
-                        preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
-                        $externalIp = $m[1];
-
                         for($i = 0; $i < 1000000; $i++) {
                                $a += $i;
                         }
