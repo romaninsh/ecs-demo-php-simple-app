@@ -28,7 +28,7 @@
                         preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
                         $externalIp = $m[1];
 
-                        for($i = 0; $i < 10000000; $i++) {
+                        for($i = 0; $i < 1000000; $i++) {
                                $a += $i;
                         }
 
