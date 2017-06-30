@@ -29,7 +29,6 @@
                         }
 
                 ?>
-                <p>The container IP is: <?php echo $externalIp; ?>.</p>
 
             </div>
         </div>
